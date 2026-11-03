@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SD Media Tech Solutions Pvt. Ltd. – Business Services Portal</title>
+<style>
+:root{--bg:#f4f7f9;--card:#fff;--tx:#14202b;--mu:#5a6a78;--bd:#e0e7ed;--pr:#0e7c86;--ok:#1a8f4c;--wn:#c77d0a;--er:#c0392b;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1418;--card:#17212a;--tx:#e8eef3;--mu:#9aabb8;--bd:#2a3944;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1418;--card:#17212a;--tx:#e8eef3;--mu:#9aabb8;--bd:#2a3944;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:14px;padding:10px 16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:18px;color:var(--pr);display:flex;align-items:center;gap:8px}
+.logo i{font-style:normal;background:var(--pr);color:#fff;border-radius:9px;width:30px;height:30px;display:grid;place-items:center;font-size:16px}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1}
+nav a{padding:7px 12px;border-radius:8px;color:var(--mu);text-decoration:none;font-weight:600;white-space:nowrap;font-size:14px}
+nav a.on{background:color-mix(in srgb,var(--pr) 14%,transparent);color:var(--pr)}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 90px}
+.hero{background:linear-gradient(135deg,var(--pr),color-mix(in srgb,var(--pr) 55%,#000));color:#fff;border-radius:18px;padding:34px 24px}
+.hero h1{margin:0 0 8px;font-size:clamp(24px,5vw,38px);line-height:1.2}
+.hero p{margin:0 0 18px;opacity:.92;max-width:560px}
+.btn{border:0;border-radius:10px;padding:10px 16px;font:600 14px inherit;font-family:inherit;cursor:pointer;background:var(--pr);color:#fff;text-decoration:none;display:inline-block}
+.btn.w{background:#fff;color:var(--pr)}.btn.o{background:transparent;color:var(--pr);border:1px solid var(--pr)}.btn.g{background:#1fa855}.btn.s{padding:6px 10px;font-size:12px}
+h2{margin:26px 0 12px;font-size:20px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.card h3{margin:6px 0 4px;font-size:16px}.card p{margin:0 0 12px;color:var(--mu);font-size:13.5px}
+.ic{font-size:26px}
+.steps{counter-reset:s}.steps .card::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--pr);color:#fff;font-weight:700;margin-bottom:8px}
+label{display:block;font-size:12.5px;color:var(--mu);margin:10px 0 4px;font-weight:600}
+input,select,textarea{width:100%;padding:9px 10px;border-radius:9px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.row{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:9px 14px;border:1px solid var(--bd);border-radius:999px;background:var(--card);cursor:pointer;font-weight:600;font-size:14px}
+.chip.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.kpi{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.kpi .card b{font-size:28px;display:block}.kpi .card span{color:var(--mu);font-size:13px}
+.bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}.bar div{height:10px;border-radius:6px;background:var(--pr)}.bar span{min-width:150px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--bd);vertical-align:top}th{color:var(--mu);font-size:12px;text-transform:uppercase}
+td small{color:var(--mu)}
+.tag{padding:2px 8px;border-radius:999px;font-size:11.5px;background:color-mix(in srgb,var(--pr) 15%,transparent);color:var(--pr);font-weight:700}
+.note{font-size:12.5px;color:var(--mu);background:color-mix(in srgb,var(--wn) 12%,transparent);border-radius:10px;padding:10px 12px;margin-top:14px}
+.ok{background:color-mix(in srgb,var(--ok) 14%,transparent);color:var(--ok);padding:12px;border-radius:10px;font-weight:600}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+#modal.on{display:flex}#mb{background:var(--card);border-radius:16px;padding:20px;max-width:520px;width:100%;max-height:90vh;overflow:auto}
+#cbf{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;border:0;background:var(--pr);color:#fff;font-size:26px;cursor:pointer;z-index:40;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+#cb{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));width:min(360px,calc(100vw - 32px));height:460px;max-height:70vh;background:var(--card);border:1px solid var(--bd);border-radius:16px;display:none;flex-direction:column;z-index:40;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+#cb.on{display:flex}#cb .h{background:var(--pr);color:#fff;padding:12px 14px;font-weight:700}
+#cm{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:85%;padding:8px 11px;border-radius:12px;font-size:13.5px;white-space:pre-wrap}.m.b{background:var(--bg);align-self:flex-start}.m.u{background:var(--pr);color:#fff;align-self:flex-end}
+#cq{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 8px}#cq .chip{padding:5px 10px;font-size:12.5px}
+#ci{display:flex;gap:6px;padding:8px;border-top:1px solid var(--bd)}
+.ln{display:flex;flex-wrap:wrap;gap:8px}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes fl{to{transform:translate(-30px,40px) scale(1.15)}}
+main>*{animation:fi .45s ease both}
+.card{transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.1)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(900px 360px at 10% -20%,color-mix(in srgb,var(--pr) 55%,#7c5cff),transparent),linear-gradient(135deg,var(--pr),color-mix(in srgb,var(--pr) 40%,#0b1020))}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.13);pointer-events:none;animation:fl 8s ease-in-out infinite alternate}
+header{backdrop-filter:blur(12px);background:color-mix(in srgb,var(--card) 86%,transparent)}
+.kpi .card b{background:linear-gradient(90deg,var(--pr),#7c5cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+h4{margin:16px 0 6px}
+</style></head>
+<body>
+<header><div class="logo"><i>◆</i><span id="bn">SD Media Tech Solutions Pvt. Ltd.</span></div>
+<nav id="nav"></nav><button class="btn s o" id="lg" data-a="lg">Login</button></header>
+<main id="app"></main>
+<div id="modal"><div id="mb"></div></div>
+<button id="cbf" data-a="cbt" aria-label="Chat">💬</button>
+<div id="cb"><div class="h">Sahayak – <span class="bn2">SD Media Tech Solutions Pvt. Ltd.</span></div><div id="cm"></div><div id="cq"></div><div id="ci"><input id="ct" placeholder="Apna sawaal likhein…"><button class="btn s" data-a="cbs">Bhejein</button></div></div>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const mem={};
+const ls={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):(mem[k]!==undefined?mem[k]:d)}catch(e){return mem[k]!==undefined?mem[k]:d}},set(k,v){mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let cfg=Object.assign({brand:'SD Media Tech Solutions Pvt. Ltd.',tag:'Business, Tax aur Insurance – sab ek hi jagah',color:'#0e7c86',wa:'919999999999'},ls.get('cs_cfg',{}));
+let leads=ls.get('cs_leads',null);
+if(!leads){const t=Date.now();leads=[
+{id:'d1',ts:t-86400000*2,name:'Ramesh Gupta',phone:'9876500001',city:'Agra, UP',service:'GST Registration',source:'Demo',status:'New',note:'',msg:'Kirana shop ke liye GST chahiye'},
+{id:'d2',ts:t-86400000,name:'Neha Rawat',phone:'9876500002',city:'Dehradun, UK',service:'Insurance – Health',source:'Demo',status:'Contacted',note:'Family floater 4 members',msg:'Star Health / Niva Bupa'},
+{id:'d3',ts:t-3600000,name:'Vikas Traders',phone:'9876500003',city:'Haridwar, UK',service:'Accounting & Bookkeeping',source:'WhatsApp',status:'In Progress',note:'Monthly retainer',msg:''}];ls.set('cs_leads',leads)}
+const ST=['New','Contacted','Docs Pending','In Progress','Completed','Lost'];
+const SERV=[['Company Registration','🏢','Pvt Ltd, LLP, OPC, Partnership, Section 8, Proprietorship'],['GST Registration','🧾','Naya GSTIN, amendment, cancellation'],['GST Filing & Support','📑','GSTR-1, 3B, annual return, notice reply'],['Accounting & Bookkeeping','📊','Monthly books, MIS, Tally/Busy'],['Income Tax / ITR','💼','Individual, firm, company ITR aur TDS'],['ROC & Compliance','⚖️','Annual filings, DIR-3 KYC, changes'],['MSME, FSSAI, Trademark','🏷️','Udyam, food licence, brand protection, IEC'],['Insurance','🛡️','Life, Health, Motor, Travel, Business']];
+const INS={Life:{ic:'❤️',co:['LIC','HDFC Life','ICICI Prudential','SBI Life','Max Life','Tata AIA','Bajaj Allianz Life'],f:[['Sum assured (₹)','number'],['Policy term (saal)','number']]},
+Term:{ic:'🛡️',co:['LIC','HDFC Life','ICICI Prudential','Max Life','Tata AIA','Bajaj Allianz Life'],f:[['Cover amount (₹)','number'],['Annual income (₹)','number']]},
+Health:{ic:'🏥',co:['Star Health','Niva Bupa','HDFC ERGO','Care Health','ICICI Lombard','New India Assurance'],f:[['Kitne members cover karne hain','number'],['Sabse bade member ki umar','number']]},
+Motor:{ic:'🚗',co:['New India Assurance','ICICI Lombard','HDFC ERGO','Bajaj Allianz','Tata AIG','Digit'],f:[['Vehicle type (Car/Bike/Commercial)','text'],['Vehicle number','text'],['Make, model aur saal','text'],['Current policy expiry','date']]},
+Travel:{ic:'✈️',co:['Tata AIG','HDFC ERGO','Bajaj Allianz','Digit'],f:[['Destination','text'],['Travel dates','text']]},
+Business:{ic:'🏭',co:['New India Assurance','United India','ICICI Lombard','HDFC ERGO'],f:[['Business type','text'],['Cover chahiye (₹)','number']]}};
+const ANY='Koi bhi – best quote dilwayein';
+let ins={cat:'',co:'',done:null};
+Object.assign(cfg,{upi:cfg.upi||'yourname@upi',upn:cfg.upn||cfg.brand,plink:cfg.plink||''});
+const T0=Date.now();
+let users=ls.get('cs_users',[{u:'owner',pin:'1234',role:'owner',name:'Owner'}]),jobs=ls.get('cs_jobs',[{id:'j1',lid:'d1',svc:'GST Registration',fee:1500,ts:T0-172800000},{id:'j3',lid:'d3',svc:'Accounting & Bookkeeping',fee:3000,ts:T0-3600000}]),pays=ls.get('cs_pays',[{id:'p1',lid:'d1',amt:1000,mode:'UPI',utr:'DEMO001',ts:T0-86400000,st:'Verified'},{id:'p2',lid:'d3',amt:1500,mode:'Cash',utr:'',ts:T0-1800000,st:'Verified'}]),wl=ls.get('cs_wl',[]),me=null;
+const sv=(k,v)=>ls.set(k,v);
+const inr=n=>'₹'+Math.round(n||0).toLocaleString('en-IN');
+const bal=id=>{const f=jobs.filter(j=>!id||j.lid===id).reduce((s,j)=>s+j.fee,0),p=pays.filter(x=>(!id||x.lid===id)&&x.st==='Verified').reduce((s,x)=>s+x.amt,0);return{fee:f,paid:p,due:f-p}};
+const wa2=(p,t)=>'https://wa.me/'+(String(p).length===10?'91':'')+p+'?text='+encodeURIComponent(t);
+const FEES0=[['Pvt Ltd Registration','ROC + stamp duty extra (state-wise)',6000,12000,4500],['LLP Registration','ROC + stamp duty extra',5000,9000,3500],['OPC Registration','ROC + stamp duty extra',5000,9000,3500],['Partnership Firm','Stamp duty extra',3000,5000,2000],['GST Registration','Nil',1000,2500,700],['GST Filing (per month)','Nil',500,1500,350],['Accounting (per month)','Nil',2000,8000,1500],['ITR – Individual','Nil',500,1500,350],['ITR – Business','Nil',2000,5000,1500],['ROC Annual – Pvt Ltd','Late fee if delayed',6000,15000,4500],['Udyam (MSME)','Nil',300,700,150],['FSSAI','Govt fee as per licence type',1000,3500,700],['Trademark','Govt fee per class extra',4000,8000,3000],['IEC','Govt fee extra',1000,2500,700]];
+let fees=ls.get('cs_fees',FEES0);
+const PLANS=[['Basic','Service catalog, apni pricing, hamara backend aur support.','₹4,999 (one-time)','–',15],['Pro','Apna logo, colour, subdomain aur client panel.','₹14,999','₹2,999',20],['Enterprise','Custom domain, apna dashboard aur priority support.','₹39,999','₹9,999',25]];
+const STEPS=[['1. Enquiry','Form ya WhatsApp se request aati hai.'],['2. Demo + KYC','Demo call; PAN, Aadhaar aur business proof liye jaate hain.'],['3. Agreement','Commission, pricing floor aur compliance terms par sign.'],['4. Setup fee','Plan ki fee UPI ya gateway se pay hoti hai.'],['5. Access','Owner username + PIN banata hai aur brand set karta hai.'],['6. Training + Go-live','Portal ki training, phir pehla client.']];
+const wa=t=>'https://wa.me/'+cfg.wa.replace(/\D/g,'')+'?text='+encodeURIComponent(t);
+const save=()=>ls.set('cs_leads',leads);
+const addLead=o=>{const l=Object.assign({id:'l'+Date.now()+Math.floor(Math.random()*99),ts:Date.now(),status:'New',note:'',msg:'',city:'',source:'Website'},o);leads.unshift(l);save();return l};
+function theme(){document.documentElement.style.setProperty('--pr',cfg.color);$('#bn').textContent=cfg.brand;document.querySelectorAll('.bn2').forEach(e=>e.textContent=cfg.brand);document.title=cfg.brand+' – Business Services Portal'}
+function home(){return `<div class="hero"><h1>${esc(cfg.brand)}</h1><p>${esc(cfg.tag)}. Company registration, GST, accounting, ITR aur insurance – Uttar Pradesh aur Uttarakhand ke businesses ke liye, Hindi + English support ke saath.</p><div class="ln"><button class="btn w" data-a="enq" data-v="">Free Enquiry</button><a class="btn w" href="#insurance">Insurance Quote</a><a class="btn w" href="#pay">Pay Online</a><a class="btn g" target="_blank" rel="noopener" href="${wa('Namaste, mujhe aapki services ke baare me jaankari chahiye')}">WhatsApp par baat karein</a></div></div>
+<h2>Hamari Services</h2><div class="grid">${SERV.map(s=>`<div class="card"><div class="ic">${s[1]}</div><h3>${s[0]}</h3><p>${s[2]}</p>${s[0]==='Insurance'?'<a class="btn s" href="#insurance">Insurance lein</a>':`<button class="btn s" data-a="enq" data-v="${esc(s[0])}">Enquiry karein</button>`}</div>`).join('')}</div>
+<h2>Kaise kaam karta hai</h2><div class="grid steps"><div class="card"><h3>Register karein</h3><p>Enquiry form, chatbot ya WhatsApp se apni zaroorat batayein.</p></div><div class="card"><h3>Documents dein</h3><p>Hamari team checklist batati hai, aap WhatsApp par documents bhejte hain.</p></div><div class="card"><h3>Kaam complete</h3><p>Status updates milte rehte hain aur sab record safe rehta hai.</p></div></div>
+<div class="note">Disclaimer: Filing aur certification ka kaam qualified CA/CS/GST practitioner partners dwara kiya jata hai. Insurance IRDAI-licensed insurers ke through hi issue hota hai.</div>`}
+function insurance(){const c=INS[ins.cat];
+if(ins.done)return `<h2>Insurance Request</h2><div class="ok">Dhanyavaad! Aapki request darj ho gayi. Hamari team jald contact karegi.</div><p><a class="btn g" target="_blank" rel="noopener" href="${wa(ins.done)}">WhatsApp par confirm karein</a> <button class="btn o" data-a="insr">Nayi request</button></p>`;
+return `<h2>Insurance – 3 aasaan steps</h2><div class="card"><label>1. Insurance ka type chunein</label><div class="chips">${Object.keys(INS).map(k=>`<span class="chip ${ins.cat===k?'on':''}" data-a="icat" data-v="${k}">${INS[k].ic} ${k}</span>`).join('')}</div>
+${c?`<label>2. Company chunein</label><div class="chips">${[ANY].concat(c.co).map(k=>`<span class="chip ${ins.co===k?'on':''}" data-a="ico" data-v="${esc(k)}">${esc(k)}</span>`).join('')}</div>`:''}
+${ins.co?`<label>3. Apni jaankari bharein</label><div class="row"><div><label>Poora naam*</label><input id="in_n"></div><div><label>Mobile (10 digit)*</label><input id="in_p" inputmode="numeric" maxlength="10"></div><div><label>Email</label><input id="in_e" type="email"></div><div><label>Janm tithi</label><input id="in_d" type="date"></div><div><label>Shehar, State</label><input id="in_c" placeholder="Dehradun, Uttarakhand"></div>${c.f.map((f,i)=>`<div><label>${f[0]}</label><input class="in_x" data-l="${esc(f[0])}" type="${f[1]}"></div>`).join('')}</div>
+<label><input type="checkbox" id="in_k" style="width:auto"> Main apni jaankari insurance quote aur follow-up ke liye share karne ki sahmati deta/deti hoon.</label><p><button class="btn" data-a="insub">Submit karein</button></p>`:''}</div>`}
+function gst(){const L=[['GST Home','https://www.gst.gov.in/'],['Taxpayer Login','https://services.gst.gov.in/services/login'],['Nayi Registration','https://reg.gst.gov.in/registration/'],['Returns Dashboard','https://return.gst.gov.in/returns/auth/dashboard'],['E-Way Bill','https://ewaybillgst.gov.in/'],['GSTIN Search / Verify','https://services.gst.gov.in/services/searchtp']];
+return `<h2>GST Hub</h2><div class="grid">${L.map(l=>`<div class="card"><h3>${l[0]}</h3><a class="btn s" target="_blank" rel="noopener" href="${l[1]}">Official portal kholein ↗</a></div>`).join('')}</div>
+<div class="note">Official GST portal me login security ki wajah se hamare page ke andar embed nahi ho sakta, isliye ye buttons naye tab me kholte hain. Client ka password kabhi apne paas save na karein.</div>
+<h2>Free Tools</h2><div class="grid"><div class="card"><h3>GSTIN format check</h3><input id="gs" placeholder="09ABCDE1234F1Z5" maxlength="15"><p id="gsr" style="margin-top:8px"></p></div>
+<div class="card"><h3>GST Calculator</h3><div class="row"><input id="ga" type="number" placeholder="Amount ₹"><select id="gr"><option>5</option><option>12</option><option selected>18</option><option>28</option></select></div><select id="gm" style="margin-top:8px"><option value="add">GST jodein (Exclusive)</option><option value="rem">GST nikalein (Inclusive)</option></select><p id="gcr" style="margin-top:8px"></p></div>
+<div class="card"><h3>Filing reminders</h3><p>Aam taur par GSTR-1: har mahine 11 tareekh. GSTR-3B: 20 se 24 tareekh (state/turnover ke hisaab se). Hamesha official due dates check karein.</p><button class="btn s" data-a="enq" data-v="GST Filing & Support">Filing service lein</button></div></div>`}
+function admin(){const n=s=>leads.filter(l=>l.status===s).length,by={};leads.forEach(l=>by[l.service]=(by[l.service]||0)+1);const top=Object.entries(by).sort((a,b)=>b[1]-a[1]).slice(0,6),mx=top.length?top[0][1]:1;
+const q=(ls.get('q','')||'').toLowerCase(),f=ls.get('f','');const rows=leads.filter(l=>(!f||l.status===f)&&(!q||(l.name+l.phone+l.service+l.city+l.note).toLowerCase().includes(q)));
+return `<h2>Dashboard</h2><div class="kpi"><div class="card"><b>${leads.length}</b><span>Total clients/leads</span></div><div class="card"><b>${n('New')}</b><span>Naye</span></div><div class="card"><b>${n('In Progress')+n('Docs Pending')}</b><span>Chal rahe</span></div><div class="card"><b>${n('Completed')}</b><span>Complete</span></div><div class="card"><b>${leads.filter(l=>/Insurance/.test(l.service)).length}</b><span>Insurance leads</span></div><div class="card"><b>${leads.filter(l=>l.source==='WhatsApp').length}</b><span>WhatsApp se</span></div><div class="card"><b>${inr(bal().fee)}</b><span>Total billing</span></div><div class="card"><b>${inr(bal().paid)}</b><span>Collected</span></div><div class="card"><b>${inr(bal().due)}</b><span>Baaki (Due)</span></div></div>${pendQ()}
+<div class="card" style="margin-top:12px"><h3>Service-wise leads</h3>${top.map(t=>`<div class="bar"><span>${esc(t[0])}</span><div style="width:${Math.max(6,t[1]/mx*50)}%"></div><b>${t[1]}</b></div>`).join('')||'<p>Abhi koi data nahi.</p>'}</div>
+<h2>WhatsApp / Manual lead add</h2><div class="card"><div class="row"><input id="w_n" placeholder="Naam"><input id="w_p" placeholder="Mobile" inputmode="numeric"><select id="w_s">${SERV.map(s=>`<option>${s[0]}</option>`).join('')}</select><input id="w_m" placeholder="Note / requirement"></div><p style="margin:10px 0 0"><button class="btn s" data-a="wadd">Record me jodein</button> <button class="btn o s" data-a="clrdemo">Demo data hatayein</button></p></div>
+<h2>CRM – Client Records</h2><div class="row" style="margin-bottom:10px"><input id="sq" placeholder="Search naam, mobile, service…" value="${esc(ls.get('q',''))}"><select id="sf"><option value="">Sabhi status</option>${ST.map(s=>`<option ${f===s?'selected':''}>${s}</option>`).join('')}</select></div>
+<div class="card tw"><table><tr><th>Client</th><th>Service</th><th>Source</th><th>Status</th><th>Note</th><th></th></tr>${rows.map(l=>`<tr><td><b>${esc(l.name)}</b><br><small>${esc(l.phone)}${l.city?' · '+esc(l.city):''}</small><br><small>Due: ${inr(bal(l.id).due)}</small></td><td>${esc(l.service)}<br><small>${esc(l.msg)}</small></td><td><span class="tag">${esc(l.source)}</span><br><small>${new Date(l.ts).toLocaleDateString('en-IN')}</small></td><td><select data-a="st" data-v="${l.id}">${ST.map(s=>`<option ${l.status===s?'selected':''}>${s}</option>`).join('')}</select></td><td><input data-a="nt" data-v="${l.id}" value="${esc(l.note)}" placeholder="Note"></td><td><a class="btn g s" target="_blank" rel="noopener" href="${wa2(l.phone,'Namaste '+l.name+', '+cfg.brand+' se baat kar rahe hain – '+l.service)}">WA</a> <button class="btn s" data-a="jr" data-v="${l.id}">Journal</button> <button class="btn o s" data-a="del" data-v="${l.id}">✕</button></td></tr>`).join('')||'<tr><td colspan="6">Koi record nahi mila.</td></tr>'}</table></div>
+<div class="note">Data abhi sirf is browser me save hota hai (demo). Multi-user login, shared database aur automatic WhatsApp API ke liye backend jodna hoga.</div>`}
+function white(){return `<h2>White-label Settings</h2><div class="card"><p>Partner apna brand, colour aur WhatsApp number yahan set karke portal ko apne naam se chala sakta hai.</p><div class="row"><div><label>Brand naam</label><input id="c_b" value="${esc(cfg.brand)}"></div><div><label>Tagline</label><input id="c_t" value="${esc(cfg.tag)}"></div><div><label>Brand colour</label><input id="c_c" type="color" value="${cfg.color}"></div><div><label>WhatsApp number (91 ke saath)</label><input id="c_w" value="${esc(cfg.wa)}"></div><div><label>UPI ID</label><input id="c_u" value="${esc(cfg.upi)}"></div><div><label>UPI payee naam</label><input id="c_un" value="${esc(cfg.upn)}"></div><div><label>Gateway payment link (Razorpay/Cashfree)</label><input id="c_pl" value="${esc(cfg.plink)}" placeholder="https://rzp.io/..."></div></div><p><button class="btn" data-a="cfg">Save karein</button></p></div>
+<div class="grid" style="margin-top:12px"><div class="card"><h3>Basic</h3><p>Service catalog + partner ki apni pricing, backend hamara.</p></div><div class="card"><h3>Pro</h3><p>Custom logo, colour aur subdomain jaise partner.yourdomain.in</p></div><div class="card"><h3>Enterprise</h3><p>Custom domain, alag dashboard aur client management.</p></div></div>`}
+const ROLES={admin:['owner','staff'],partners:['owner'],vault:['owner'],access:['owner'],mypanel:['partner']};
+const NAV=[['home','Home'],['insurance','Insurance'],['gst','GST Hub'],['pay','Pay'],['partner','Partner Program'],['admin','Dashboard & CRM'],['partners','Partners'],['vault','Fee Vault'],['access','Access & Settings'],['mypanel','My Panel']];
+const can=v=>!ROLES[v]||(me&&ROLES[v].includes(me.role));
+function loginV(){return `<h2>Login</h2><div class="card" style="max-width:380px"><p>Staff, Partner ya Owner login.</p><label>Username</label><input id="l_u" autocapitalize="off"><label>PIN</label><input id="l_p" type="password"><p><button class="btn" data-a="dologin">Login</button></p></div>`}
+function pay(){return `<h2>Online Payment</h2><div class="grid"><div class="card"><h3>UPI se payment</h3><p>Amount aur reference daalein, phir apna app chunein.</p><label>Amount (₹)</label><input id="p_a" type="number"><label>Reference (naam / invoice)</label><input id="p_r"><div class="ln" style="margin-top:12px" id="pl"></div></div>
+<div class="card"><h3>Card / NetBanking / EMI</h3><p>Secure payment gateway.</p>${cfg.plink?`<a class="btn" target="_blank" rel="noopener" href="${esc(cfg.plink)}">Gateway se pay karein ↗</a>`:'<p>Gateway link abhi set nahi hai.</p>'}</div>
+<div class="card"><h3>Payment kar diya? Confirm karein</h3><label>Naam</label><input id="q_n"><label>Mobile</label><input id="q_p" inputmode="numeric" maxlength="10"><label>Amount (₹)</label><input id="q_a" type="number"><label>UTR / Transaction ID</label><input id="q_u"><p><button class="btn" data-a="paysub">Submit</button></p></div></div><div class="note">UPI payment ka status automatic confirm nahi hota. Aapki entry team verify karke aapke journal me jodti hai.</div>`}
+function partner(){return `<div class="hero"><h1>White-label Partner Program</h1><p>Apne naam se ${esc(cfg.brand)} ki services bechein. Kaam hum karte hain, margin aapka.</p></div>
+<h2>Plans</h2><div class="grid">${PLANS.map(p=>`<div class="card"><h3>${p[0]}</h3><p>${p[1]}</p></div>`).join('')}</div>
+<h2>Access milne ka process</h2><div class="grid steps">${STEPS.map(s=>`<div class="card"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('')}</div>
+<h2>Partner enquiry</h2><div class="card"><div class="row"><input id="w1" placeholder="Naam*"><input id="w2" placeholder="Mobile*" inputmode="numeric" maxlength="10"><input id="w3" placeholder="Shehar, State"><select id="w4"><option>CA / Tax consultant</option><option>CSC / Cyber cafe</option><option>Insurance agent</option><option>Freelancer / Other</option></select><select id="w5">${PLANS.map(p=>`<option>${p[0]}</option>`).join('')}</select><input id="w6" placeholder="Experience / clients (optional)"></div><p><button class="btn" data-a="wlsub">Enquiry bhejein</button></p></div>`}
+function pendQ(){const p=pays.filter(x=>x.st==='Pending');if(!p.length)return '';return `<h2>Payment verify queue</h2><div class="card tw"><table><tr><th>Payer</th><th>Amount</th><th>UTR</th><th></th></tr>${p.map(x=>`<tr><td>${esc(x.name||'')}<br><small>${esc(x.phone||'')}</small></td><td>${inr(x.amt)}</td><td>${esc(x.utr)}</td><td><button class="btn s g" data-a="pv" data-v="${x.id}">Verify</button> <button class="btn s o" data-a="pr" data-v="${x.id}">Reject</button></td></tr>`).join('')}</table></div>`}
+function jrHtml(id){const l=leads.find(x=>x.id===id);if(!l)return'';const b=bal(id),J=jobs.filter(j=>j.lid===id),P=pays.filter(p=>p.lid===id);
+return `<h3 style="margin-top:0">${esc(l.name)} – Client Journal</h3><p style="color:var(--mu);margin-top:-6px">${esc(l.phone)} ${esc(l.city)}</p><div class="kpi"><div class="card"><b>${inr(b.fee)}</b><span>Total fee</span></div><div class="card"><b>${inr(b.paid)}</b><span>Paid</span></div><div class="card"><b>${inr(b.due)}</b><span>Baaki</span></div></div>
+<h4>Services liye</h4><table>${J.map(j=>`<tr><td>${esc(j.svc)}<br><small>${new Date(j.ts).toLocaleDateString('en-IN')}</small></td><td>${inr(j.fee)}</td></tr>`).join('')||'<tr><td>Abhi koi service nahi</td></tr>'}</table>
+<div class="row"><select id="j_s">${SERV.map(s=>`<option>${s[0]}</option>`).join('')}</select><input id="j_f" type="number" placeholder="Fee ₹"></div><p><button class="btn s" data-a="jadd" data-v="${id}">Service jodein</button></p>
+<h4>Payments</h4><table>${P.map(p=>`<tr><td>${inr(p.amt)} <span class="tag">${p.st}</span><br><small>${esc(p.mode)} ${esc(p.utr||'')} · ${new Date(p.ts).toLocaleDateString('en-IN')}</small></td></tr>`).join('')||'<tr><td>Koi payment nahi</td></tr>'}</table>
+<div class="row"><input id="k_a" type="number" placeholder="Amount ₹"><select id="k_m"><option>UPI</option><option>Cash</option><option>Bank</option><option>Gateway</option></select><input id="k_u" placeholder="UTR / ref"></div><p><button class="btn s" data-a="padd" data-v="${id}">Payment record karein</button> <button class="btn o s" data-a="close">Band karein</button></p>`}
+function partners(){return `<h2>Partner Pipeline <span class="tag">Sirf Owner</span></h2>`+(wl.map(w=>{const pc=leads.filter(l=>l.partner===w.u).map(l=>l.id),col=pays.filter(p=>p.st==='Verified'&&pc.includes(p.lid)).reduce((s,p)=>s+p.amt,0);return `<div class="card" style="margin-bottom:10px"><b>${esc(w.name)}</b> <span class="tag">${esc(w.plan)}</span> <span class="tag">${esc(w.type)}</span><br><small>${esc(w.phone)} · ${esc(w.city)}</small>
+<div class="row" style="margin-top:8px"><select data-a="wst" data-v="${w.id}">${['Enquiry','Demo done','Agreement','Fee paid','Active','Rejected'].map(s=>`<option ${w.stage===s?'selected':''}>${s}</option>`).join('')}</select><input data-a="wcm" data-v="${w.id}" type="number" value="${w.comm}" placeholder="Commission %"></div>
+<div class="chips" style="margin-top:8px">${STEPS.map((s,i)=>`<span class="chip ${w.steps[i]?'on':''}" data-a="wsp" data-v="${w.id}:${i}">${s[0]}</span>`).join('')}</div>
+<p style="margin:10px 0 0">${w.u?`Login: <b>${esc(w.u)}</b> · Clients ${pc.length} · Collected ${inr(col)} · Commission due <b>${inr(col*w.comm/100)}</b>`:`<button class="btn s" data-a="wgr" data-v="${w.id}">Access dein (login banayein)</button>`} <a class="btn g s" target="_blank" rel="noopener" href="${wa2(w.phone,'Namaste '+w.name+', '+cfg.brand+' partner program ke baare me')}">WA</a></p></div>`}).join('')||'<div class="card">Abhi koi partner enquiry nahi aayi.</div>')}
+function vault(){return `<h2>Fee & Commission Guide <span class="tag">Sirf Owner</span></h2><div class="note" style="margin:0 0 12px">Ye rates suggested/indicative hain (UP-UK tier-2 market ke hisaab se). Govt/statutory fees alag lagti hain aur badalti rehti hain, official portal se verify karein. Apne local competition ke hisaab se numbers edit karein.</div>
+<div class="card tw"><table><tr><th>Service</th><th>Govt fee</th><th>Retail min ₹</th><th>Retail max ₹</th><th>Partner price ₹</th><th>Partner margin</th></tr>${fees.map((f,i)=>`<tr><td>${esc(f[0])}</td><td><small>${esc(f[1])}</small></td>${[2,3,4].map(c=>`<td><input type="number" style="width:90px" data-a="fe" data-v="${i}:${c}" value="${f[c]}"></td>`).join('')}<td>${inr(f[2]-f[4])} – ${inr(f[3]-f[4])}</td></tr>`).join('')}</table></div>
+<h2>Commission model</h2><div class="grid"><div class="card"><h3>Model A – Wholesale</h3><p>Partner "Partner price" par hamse kaam karwata hai aur client se retail fee leta hai; margin partner ka. Partner retail minimum se neeche na beche. Hamara target margin 25–35% (CA/staff cost ke baad).</p></div>
+<div class="card"><h3>Model B – Referral</h3><p>Partner sirf client lata hai, hum deliver karte hain. Commission hamari collected fee par: Bronze 15% (₹0–50k/mahina), Silver 20% (₹50k–2L), Gold 25% (₹2L+).</p></div>
+<div class="card"><h3>Insurance</h3><p>Commission insurer se milta hai (IRDAI rules ke under). Partner ko hamare commission ka 40–60% share de sakte hain. Insurer ka payout grid verify karein.</p></div>
+<div class="card"><h3>Payout rules</h3><p>Commission sirf verified payment par, har mahine ki 5 tareekh ko. Refund/cancel par adjust. Commission par TDS (Sec 194H) lag sakta hai, CA se confirm karein.</p></div></div>
+<h2>Partner plans</h2><div class="card tw"><table><tr><th>Plan</th><th>Setup fee</th><th>Yearly</th><th>Default commission</th></tr>${PLANS.map(p=>`<tr><td>${p[0]}</td><td>${p[2]}</td><td>${p[3]}</td><td>${p[4]}%</td></tr>`).join('')}</table></div>`}
+function access(){return `<h2>Users & Access <span class="tag">Sirf Owner</span></h2><div class="card tw"><table><tr><th>User</th><th>Role</th><th>PIN</th><th></th></tr>${users.map((u,i)=>`<tr><td>${esc(u.u)}<br><small>${esc(u.name)}</small></td><td>${u.role}</td><td><input style="width:90px" data-a="upin" data-v="${i}" value="${esc(u.pin)}"></td><td>${u.role==='owner'?'':`<button class="btn o s" data-a="udel" data-v="${i}">✕</button>`}</td></tr>`).join('')}</table></div>
+<div class="card" style="margin-top:12px"><h3>Naya staff user</h3><div class="row"><input id="u_n" placeholder="Naam"><input id="u_u" placeholder="username"><input id="u_p" placeholder="PIN (4+ digit)"></div><p><button class="btn s" data-a="uadd">Staff jodein</button></p></div>
+<h2>Brand, Payment aur WhatsApp settings</h2>`+white()}
+function mypanel(){const L=leads.filter(l=>l.partner===me.u),w=wl.find(x=>x.u===me.u)||{comm:15},col=pays.filter(p=>p.st==='Verified'&&L.some(l=>l.id===p.lid)).reduce((s,p)=>s+p.amt,0);
+return `<h2>Mera Panel – ${esc(me.name)}</h2><div class="kpi"><div class="card"><b>${L.length}</b><span>Mere clients</span></div><div class="card"><b>${inr(col)}</b><span>Collected</span></div><div class="card"><b>${inr(col*w.comm/100)}</b><span>Meri commission (${w.comm}%)</span></div></div>
+<h2>Naya client</h2><div class="card"><div class="row"><input id="m_n" placeholder="Naam"><input id="m_p" placeholder="Mobile" inputmode="numeric" maxlength="10"><select id="m_s">${SERV.map(s=>`<option>${s[0]}</option>`).join('')}</select></div><p><button class="btn s" data-a="madd">Client jodein</button></p></div>
+<h2>Clients</h2><div class="card tw"><table><tr><th>Client</th><th>Service</th><th>Status</th><th>Due</th></tr>${L.map(l=>`<tr><td>${esc(l.name)}<br><small>${esc(l.phone)}</small></td><td>${esc(l.service)}</td><td>${l.status}</td><td>${inr(bal(l.id).due)}</td></tr>`).join('')||'<tr><td colspan="4">Abhi koi client nahi.</td></tr>'}</table></div><p><a class="btn" href="#pay">Client payment page</a></p>`}
+const V={home,insurance,gst,pay,partner,admin,partners,vault,access,mypanel,login:loginV};
+function toast(m){let t=$('#toast');if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:10px;z-index:99;font-size:14px;max-width:90vw';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(()=>t.style.display='none',3000)}
+window.alert=toast;
+function act(x,v,a){
+if(x==='lg'){if(me){me=null;location.hash='#home';render()}else location.hash='#login';return}
+if(x==='dologin'){const u=users.find(z=>z.u===$('#l_u').value.trim()&&z.pin===$('#l_p').value.trim());if(!u)return toast('Username ya PIN galat hai');me=u;toast('Welcome '+u.name);location.hash=u.role==='partner'?'#mypanel':'#admin';render();return}
+if(x==='jr'){modal(jrHtml(v));return}
+if(x==='jadd'){const f=+$('#j_f').value;if(!f)return toast('Fee daalein');jobs.push({id:'j'+Date.now(),lid:v,svc:$('#j_s').value,fee:f,ts:Date.now()});sv('cs_jobs',jobs);modal(jrHtml(v));render();return}
+if(x==='padd'){const m=+$('#k_a').value;if(!m)return toast('Amount daalein');pays.push({id:'p'+Date.now(),lid:v,amt:m,mode:$('#k_m').value,utr:$('#k_u').value,ts:Date.now(),st:'Verified'});sv('cs_pays',pays);modal(jrHtml(v));render();return}
+if(x==='pv'||x==='pr'){const p=pays.find(z=>z.id===v);if(p){if(x==='pv'){p.st='Verified';if(!p.lid){const l=leads.find(z=>z.phone===p.phone);if(l)p.lid=l.id}}else p.st='Rejected';sv('cs_pays',pays);render()}return}
+if(x==='paysub'){const n=$('#q_n').value.trim(),ph=$('#q_p').value.trim(),m=+$('#q_a').value,u=$('#q_u').value.trim();if(!n||!ok10(ph)||!m||!u)return toast('Naam, mobile, amount aur UTR zaroori hain');pays.push({id:'p'+Date.now(),name:n,phone:ph,lid:(leads.find(z=>z.phone===ph)||{}).id||'',amt:m,mode:'UPI',utr:u,ts:Date.now(),st:'Pending'});sv('cs_pays',pays);toast('Dhanyavaad! Verify hone ke baad journal me dikhega.');return}
+if(x==='wlsub'){const n=$('#w1').value.trim(),p=$('#w2').value.trim();if(!n||!ok10(p))return toast('Naam aur sahi mobile daalein');wl.unshift({id:'w'+Date.now(),name:n,phone:p,city:$('#w3').value,type:$('#w4').value,plan:$('#w5').value,exp:$('#w6').value,ts:Date.now(),stage:'Enquiry',steps:[0,0,0,0,0,0],comm:15,u:''});sv('cs_wl',wl);toast('Enquiry mil gayi! Hamari team contact karegi.');return}
+if(x==='wsp'){const q=v.split(':'),w=wl.find(z=>z.id===q[0]);w.steps[q[1]]=w.steps[q[1]]?0:1;sv('cs_wl',wl);render();return}
+if(x==='wgr'){const w=wl.find(z=>z.id===v),u=(w.name.toLowerCase().replace(/[^a-z]/g,'').slice(0,8)||'partner')+Math.floor(100+Math.random()*900),pin=String(Math.floor(1000+Math.random()*9000));users.push({u,pin,role:'partner',name:w.name});w.u=u;w.stage='Active';sv('cs_users',users);sv('cs_wl',wl);modal(`<h3 style="margin-top:0">Partner access ban gaya</h3><p>Username: <b>${u}</b><br>PIN: <b>${pin}</b></p><p><a class="btn g" target="_blank" rel="noopener" href="${wa2(w.phone,'Namaste '+w.name+', aapka '+cfg.brand+' partner login – Username: '+u+', PIN: '+pin+'. Link: '+location.href.split('#')[0])}">WhatsApp par bhejein</a> <button class="btn o" data-a="close">Band karein</button></p>`);render();return}
+if(x==='uadd'){const u=$('#u_u').value.trim(),p=$('#u_p').value.trim();if(!u||p.length<4||users.some(z=>z.u===u))return toast('Unique username aur 4+ digit PIN chahiye');users.push({u,pin:p,role:'staff',name:$('#u_n').value||u});sv('cs_users',users);render();return}
+if(x==='udel'){if(a.dataset.s){users.splice(+v,1);sv('cs_users',users);render()}else{a.dataset.s=1;a.textContent='Pakka?'}return}
+if(x==='madd'){const n=$('#m_n').value.trim(),p=$('#m_p').value.trim();if(!n||!ok10(p))return toast('Naam aur sahi mobile daalein');addLead({name:n,phone:p,service:$('#m_s').value,source:'Partner',partner:me.u});render()}
+}
+document.addEventListener('change',e=>{const a=e.target.dataset.a,v=e.target.dataset.v,val=e.target.value;
+if(a==='wst'){wl.find(z=>z.id===v).stage=val;sv('cs_wl',wl);render()}
+if(a==='wcm'){wl.find(z=>z.id===v).comm=+val;sv('cs_wl',wl);render()}
+if(a==='fe'){const q=v.split(':');fees[q[0]][q[1]]=+val;sv('cs_fees',fees);render()}
+if(a==='upin'){users[v].pin=val;sv('cs_users',users);toast('PIN update ho gaya')}});
+function render(){let v=(location.hash||'#home').slice(1);if(!V[v])v='home';$('#app').innerHTML=can(v)?V[v]():loginV();$('#nav').innerHTML=NAV.filter(n=>can(n[0])).map(n=>`<a href="#${n[0]}" class="${n[0]===v?'on':''}">${n[1]}</a>`).join('');$('#lg').textContent=me?'Logout ('+me.u+')':'Login';theme();
+const gs=$('#gs');if(gs)gs.oninput=()=>{const ok=/^\d{2}[A-Z]{5}\d{4}[A-Z][1-9A-Z]Z[0-9A-Z]$/.test(gs.value.toUpperCase());$('#gsr').textContent=gs.value?(ok?'✔ Format sahi hai (official verify zaroor karein)':'✘ Format galat'):''};
+const pa=$('#p_a');if(pa){const u=()=>{const am=+pa.value||0,q='pa='+encodeURIComponent(cfg.upi)+'&pn='+encodeURIComponent(cfg.upn)+(am?'&am='+am:'')+'&cu=INR&tn='+encodeURIComponent($('#p_r').value||'Service fee');$('#pl').innerHTML=[['Koi bhi UPI app','upi://pay?'],['PhonePe','phonepe://pay?'],['Google Pay','tez://upi/pay?'],['Paytm','paytmmp://pay?']].map(b=>`<a class="btn s" href="${b[1]+q}">${b[0]}</a>`).join('')+`<p style="width:100%;font-size:12.5px;color:var(--mu)">UPI ID: <b>${esc(cfg.upi)}</b> (mobile par app khulega)</p>`};pa.oninput=u;$('#p_r').oninput=u;u()}
+const ga=$('#ga');if(ga){const c=()=>{const a=+ga.value||0,r=+$('#gr').value,m=$('#gm').value;const g=m==='add'?a*r/100:a-a*100/(100+r);$('#gcr').textContent=a?`GST: ₹${g.toFixed(2)} · Total: ₹${(m==='add'?a+g:a).toFixed(2)} · Base: ₹${(m==='add'?a:a-g).toFixed(2)}`:''};ga.oninput=c;$('#gr').onchange=c;$('#gm').onchange=c}
+const sq=$('#sq');if(sq){sq.oninput=()=>{ls.set('q',sq.value);const p=sq.selectionStart;render();const n=$('#sq');n.focus();n.setSelectionRange(p,p)};$('#sf').onchange=e=>{ls.set('f',e.target.value);render()}}}
+addEventListener('hashchange',render);
+function modal(h){$('#mb').innerHTML=h;$('#modal').classList.add('on')}
+const closeM=()=>$('#modal').classList.remove('on');
+$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeM()});
+function enq(s){modal(`<h3 style="margin-top:0">Enquiry / Registration</h3><div id="eb"><label>Poora naam*</label><input id="e_n"><label>Mobile (10 digit)*</label><input id="e_p" inputmode="numeric" maxlength="10"><label>Shehar, State</label><input id="e_c" placeholder="Agra, Uttar Pradesh"><label>Service</label><select id="e_s">${SERV.map(x=>`<option ${x[0]===s?'selected':''}>${x[0]}</option>`).join('')}</select><label>Aapki zaroorat</label><textarea id="e_m" rows="3"></textarea><p><button class="btn" data-a="esend">Submit</button> <button class="btn o" data-a="close">Band karein</button></p></div>`)}
+const ok10=p=>/^[6-9]\d{9}$/.test(p);
+document.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(!a)return;const x=a.dataset.a,v=a.dataset.v;
+if(x==='enq')enq(v);else if(x==='close')closeM();
+else if(x==='esend'){const n=$('#e_n').value.trim(),p=$('#e_p').value.trim();if(!n||!ok10(p)){alert('Naam aur sahi 10 digit mobile number daalein.');return}const s=$('#e_s').value,m=$('#e_m').value;addLead({name:n,phone:p,city:$('#e_c').value,service:s,msg:m});$('#eb').innerHTML=`<div class="ok">Dhanyavaad ${esc(n)}! Aapki enquiry darj ho gayi.</div><p><a class="btn g" target="_blank" rel="noopener" href="${wa('Namaste, main '+n+'. Mujhe '+s+' ke baare me jaankari chahiye. '+m)}">WhatsApp par bhi bhejein</a> <button class="btn o" data-a="close">Band karein</button></p>`}
+else if(x==='icat'){ins.cat=v;ins.co='';render()}else if(x==='ico'){ins.co=v;render()}else if(x==='insr'){ins={cat:'',co:'',done:null};render()}
+else if(x==='insub'){const n=$('#in_n').value.trim(),p=$('#in_p').value.trim();if(!n||!ok10(p)){alert('Naam aur sahi mobile number zaroori hai.');return}if(!$('#in_k').checked){alert('Kripya sahmati par tick karein.');return}
+const d=[...document.querySelectorAll('.in_x')].map(i=>i.dataset.l+': '+i.value).join('; ');addLead({name:n,phone:p,city:$('#in_c').value,service:'Insurance – '+ins.cat,msg:ins.co+' | '+d+' | DOB: '+$('#in_d').value+' | '+$('#in_e').value});ins.done='Namaste, main '+n+'. '+ins.cat+' insurance ('+ins.co+') ke liye request submit ki hai.';render()}
+else if(x==='st'){}else if(x==='del'){if(a.dataset.s){leads=leads.filter(l=>l.id!==v);save();render()}else{a.dataset.s=1;a.textContent='Pakka?'}}
+else if(x==='wadd'){const n=$('#w_n').value.trim(),p=$('#w_p').value.trim();if(!n||!ok10(p)){alert('Naam aur sahi mobile daalein.');return}addLead({name:n,phone:p,service:$('#w_s').value,msg:$('#w_m').value,source:'WhatsApp'});render()}
+else if(x==='clrdemo'){leads=leads.filter(l=>l.source!=='Demo');save();render()}
+else if(x==='cfg'){cfg={brand:$('#c_b').value||'SD Media Tech Solutions Pvt. Ltd.',tag:$('#c_t').value,color:$('#c_c').value,wa:$('#c_w').value,upi:$('#c_u').value,upn:$('#c_un').value,plink:$('#c_pl').value};ls.set('cs_cfg',cfg);render();alert('Save ho gaya.')}
+else if(x==='cbt'){$('#cb').classList.toggle('on');if(!$('#cm').children.length)bot0()}
+else if(x==='cbs')send($('#ct').value);else if(x==='cbq')send(v);else act(x,v,a)});
+document.addEventListener('change',e=>{const a=e.target.dataset;if(a.a==='st'){const l=leads.find(l=>l.id===a.v);if(l){l.status=e.target.value;save();render()}}if(a.a==='nt'){const l=leads.find(l=>l.id===a.v);if(l){l.note=e.target.value;save()}}});
+$('#ct').addEventListener('keydown',e=>{if(e.key==='Enter')send($('#ct').value)});
+/* Chatbot */
+let cs={step:'',svc:'',name:''};
+const say=(t,c)=>{const d=document.createElement('div');d.className='m '+c;d.textContent=t;$('#cm').appendChild(d);$('#cm').scrollTop=1e5};
+const qr=a=>{$('#cq').innerHTML=a.map(t=>`<span class="chip" data-a="cbq" data-v="${esc(t)}">${esc(t)}</span>`).join('')};
+const MENU=['Company Registration','GST','Accounting','ITR','Insurance','Callback chahiye'];
+function bot0(){say('Namaste! 🙏 Main '+cfg.brand+' ka sahayak hoon. Aap kis cheez ke baare me jaanna chahte hain?','b');qr(MENU)}
+const KB=[[/company|llp|pvt|private|opc|firm|partnership/i,'Company Registration','Pvt Ltd, LLP, OPC, Partnership ya Proprietorship – aapke business ke hisaab se sahi structure hum batayenge. Documents: PAN, Aadhaar, address proof aur photo.'],[/gst/i,'GST','GST registration, monthly/quarterly filing aur notice support available hai. Documents: PAN, Aadhaar, business address proof, bank details.'],[/account|book|tally/i,'Accounting','Monthly bookkeeping, MIS aur Tally/Busy support available hai.'],[/itr|income|tax|tds/i,'ITR','Individual, firm aur company ITR tatha TDS filing me madad milti hai.'],[/insur|bima|policy|vehicle|car|bike|health|life/i,'Insurance','Life, Health, Motor, Travel aur Business insurance – kisi bhi company ka. Insurance page par 3 steps me form bhar sakte hain: #insurance'],[/price|fees|charge|kitna|rate/i,'Enquiry','Fees service aur business size par depend karti hai. Apna naam aur number dein, team exact quote bhejegi.']];
+function send(t){t=(t||'').trim();if(!t)return;$('#ct').value='';say(t,'u');$('#cq').innerHTML='';
+if(cs.step==='name'){cs.name=t;cs.step='phone';return say('Dhanyavaad '+t+'. Apna 10 digit mobile number batayein.','b')}
+if(cs.step==='phone'){if(!ok10(t.replace(/\s/g,''))){return say('Kripya sahi 10 digit mobile number likhein.','b')}addLead({name:cs.name,phone:t.replace(/\s/g,''),service:cs.svc||'General Enquiry',source:'Chatbot',msg:'Chatbot se aaya'});cs.step='';say('Aapki details save ho gayi hain ✅ Hamari team jald contact karegi.','b');return qr(MENU)}
+if(/callback|call|enquiry|baat|contact|connect/i.test(t)){cs.step='name';cs.svc=cs.svc||'General Enquiry';return say('Zaroor! Aapka naam kya hai?','b')}
+const k=KB.find(x=>x[0].test(t));if(k){cs.svc=k[1]==='Enquiry'?cs.svc:k[1];say(k[2],'b');return qr(['Callback chahiye','Doosri service'])}
+if(/doosri|menu|hi|hello|namaste/i.test(t)){return bot0()}
+say('Main aapki poori madad ke liye team se connect kar dunga. Naam aur number dene ke liye "Callback chahiye" dabayein.','b');qr(MENU)}
+render();
+</script></body></html>
